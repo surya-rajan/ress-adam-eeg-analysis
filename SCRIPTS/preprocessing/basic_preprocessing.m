@@ -43,7 +43,7 @@ function EEG = basic_preprocessing(EEG, params)
         EEG = pop_eegfiltnew(EEG, 'locutoff',0.1);
         EEG.setname = sprintf('%s_hpf', string(EEG.setname));
         EEG = eeg_checkset( EEG );
-        EEG.comments = pop_comments(EEG.comments,'','Dataset was highpass filtered at 1 Hz.',1);
+        EEG.comments = pop_comments(EEG.comments,'','Dataset was highpass filtered at 0.1 Hz.',1);
     end
 
     % TODO: add cleanline
